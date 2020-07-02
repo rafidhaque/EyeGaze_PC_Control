@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33d1c7e1-674a-415f-a405-69f0e115e798" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +33,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ResearchProject\GazeDetection" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.GameController">
     <configuration name="Game (1)" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -121,8 +134,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.GameController" />
-        <item itemvalue="Python.gaze" />
         <item itemvalue="Python.Game" />
+        <item itemvalue="Python.gaze" />
       </list>
     </recent_temporary>
   </component>
@@ -138,6 +151,17 @@
       <updated>1587496878407</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588648484194">
