@@ -1,4 +1,3 @@
-
 import sys
 import cv2
 import numpy as np
@@ -23,19 +22,18 @@ cnt = 0
 flag = 1
 k_cnt = 0
 cnt_fin = 0
-a=0
-b=0
-a1=0
-b1=0
-a2=0
-b2=0
-a3=0
-b3=0
-a4=0
-b4=0
-a5=0
-b5=0
-
+a = 0
+b = 0
+a1 = 0
+b1 = 0
+a2 = 0
+b2 = 0
+a3 = 0
+b3 = 0
+a4 = 0
+b4 = 0
+a5 = 0
+b5 = 0
 
 # Famous font for printing on the screen
 font = cv2.FONT_HERSHEY_SIMPLEX
@@ -54,8 +52,7 @@ while True:
         # Human face can be divided into many points or landmarks. left eye 36-41 and right eye 42-47
         # polyline is the red hyperbola which is appearing after detecting the eye
 
-
-        left_eye_region = np.array([ (landmarks.part(34).x, landmarks.part(34).y),
+        left_eye_region = np.array([(landmarks.part(34).x, landmarks.part(34).y),
                                     (landmarks.part(36).x, landmarks.part(36).y),
                                     (landmarks.part(37).x, landmarks.part(37).y),
                                     (landmarks.part(38).x, landmarks.part(38).y),
@@ -68,16 +65,16 @@ while True:
                                      (landmarks.part(45).x, landmarks.part(45).y),
                                      (landmarks.part(46).x, landmarks.part(46).y),
                                      (landmarks.part(47).x, landmarks.part(47).y)], np.int32)
-        #cv2.putText(frame, "X"+" "+str(landmarks.part(36).x)+" "+str(landmarks.part(36).y),
-                    #(25,400), cv2.FONT_HERSHEY_SIMPLEX, 1,
-                    #(0, 255, 255))
-        cv2#.putText(frame, ".",
+        # cv2.putText(frame, "X"+" "+str(landmarks.part(36).x)+" "+str(landmarks.part(36).y),
+        # (25,400), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        # (0, 255, 255))
+        cv2  # .putText(frame, ".",
         #           (landmarks.part(34).x, landmarks.part(34).y), cv2.FONT_HERSHEY_SIMPLEX, 1,
-       # cv2.putText(frame, "O",
-                  #  (landmarks.part(37).x*(-2)+100, landmarks.part(37).y*(2)-100), cv2.FONT_HERSHEY_SIMPLEX, 1,
-                   # (0, 255, 255))
+        # cv2.putText(frame, "O",
+        #  (landmarks.part(37).x*(-2)+100, landmarks.part(37).y*(2)-100), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        # (0, 255, 255))
         cv2.putText(frame, ".",
-                    (landmarks.part(37).x , landmarks.part(37).y ), cv2.FONT_HERSHEY_SIMPLEX, 1,
+                    (landmarks.part(37).x, landmarks.part(37).y), cv2.FONT_HERSHEY_SIMPLEX, 1,
                     (0, 255, 255))
         cv2.putText(frame, "Y",
                     (150, 200), cv2.FONT_HERSHEY_SIMPLEX, 1,
@@ -85,19 +82,25 @@ while True:
         cv2.putText(frame, "X",
                     (190, 200), cv2.FONT_HERSHEY_SIMPLEX, 1,
                     (0, 255, 255))
-      #  cv2.putText(frame, ".",
-       #             (landmarks.part(37).x, landmarks.part(37).y), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        #  cv2.putText(frame, ".",
+        #             (landmarks.part(37).x, landmarks.part(37).y), cv2.FONT_HERSHEY_SIMPLEX, 1,
         #            (0, 255, 255))
-        print(landmarks.part(36).y,landmarks.part(37).y,landmarks.part(38).y,landmarks.part(39).y,landmarks.part(40).y,landmarks.part(41).y)
-        print (landmarks.part(37).x, landmarks.part(37).y, landmarks.part(46).x, landmarks.part(46).y)
-        if(landmarks.part(36).y<a and landmarks.part(37).y<a1 and landmarks.part(38).y<a2 and landmarks.part(39).y<a3 and landmarks.part(40).y<a4 and landmarks.part(41).y<a5 and landmarks.part(42).y<b and landmarks.part(43).y<b1 and landmarks.part(44).y<b2 and landmarks.part(45).y<b3 and landmarks.part(46).y<b4 and landmarks.part(47).y<b5 ):
-            cv2.putText(frame, "WELCOME!!!!!!!!!!!!!!!!!!!!" + str(landmarks.part(37).x)+"x  y"+str(landmarks.part(37).y), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1,
+        print(landmarks.part(36).y, landmarks.part(37).y, landmarks.part(38).y, landmarks.part(39).y,
+              landmarks.part(40).y, landmarks.part(41).y)
+        print(landmarks.part(37).x, landmarks.part(37).y, landmarks.part(46).x, landmarks.part(46).y)
+        if (landmarks.part(36).y < a and landmarks.part(37).y < a1 and landmarks.part(38).y < a2 and landmarks.part(
+                39).y < a3 and landmarks.part(40).y < a4 and landmarks.part(41).y < a5 and landmarks.part(
+                42).y < b and landmarks.part(43).y < b1 and landmarks.part(44).y < b2 and landmarks.part(
+                45).y < b3 and landmarks.part(46).y < b4 and landmarks.part(47).y < b5):
+            cv2.putText(frame,
+                        "WELCOME!!!!!!!!!!!!!!!!!!!!" + str(landmarks.part(37).x) + "x  y" + str(landmarks.part(37).y),
+                        (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1,
                         (255, 0, 120))
             print("Okay bro a b")
             print(a)
             print(b)
-        a=landmarks.part(36).y
-        b=landmarks.part(42).y
+        a = landmarks.part(36).y
+        b = landmarks.part(42).y
         a1 = landmarks.part(37).y
         b1 = landmarks.part(43).y
         a2 = landmarks.part(38).y
@@ -108,14 +111,14 @@ while True:
         b4 = landmarks.part(46).y
         a5 = landmarks.part(41).y
         b5 = landmarks.part(47).y
-        #cv2.putText(frame, "Hello World!!!"+str(landmarks.part(37).x), (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255))
+        # cv2.putText(frame, "Hello World!!!"+str(landmarks.part(37).x), (200, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,
+        # 255, 255))
         if 220 <= landmarks.part(37).x <= 250 and landmarks.part(
                 37).y >= 130 and landmarks.part(37).y <= 150 and landmarks.part(46).x >= 375 and landmarks.part(
-                46).x <= 405 and landmarks.part(46).y >= 145 and landmarks.part(46).y <= 165:
+            46).x <= 405 and 145 <= landmarks.part(46).y <= 165:
             print("Hellooooo")
             cv2.polylines(frame, [left_eye_region], True, (0, 0, 255), 2)
             cv2.polylines(frame, [right_eye_region], True, (0, 0, 255), 2)
-
 
             # minimum ar maximum value is the initial position of the eye
             left_min_x = np.min(left_eye_region[:, 0])

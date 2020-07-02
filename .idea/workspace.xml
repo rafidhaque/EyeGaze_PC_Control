@@ -114,9 +114,6 @@
       <module name="GazeDetection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="D:\pyCHarm\Anachonda\envs\Second\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -134,8 +131,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.GameController" />
-        <item itemvalue="Python.Game" />
         <item itemvalue="Python.gaze" />
+        <item itemvalue="Python.Game" />
       </list>
     </recent_temporary>
   </component>

@@ -56,8 +56,8 @@ while True:
         # eyeDetection(landmarks.part(42),landmarks.part(45),landmarks.part(43),landmarks.part(44),landmarks.part(46),landmarks.part(47))
 
         # gaze detection
-        g.getColored_Eye([36, 37, 38, 39, 40, 41], landmarks, frame)
-        g.getColored_Eye([42, 43, 44, 45, 46, 47], landmarks, frame)
+        g.get_colored_eye([36, 37, 38, 39, 40, 41], landmarks, frame)
+        g.get_colored_eye([42, 43, 44, 45, 46, 47], landmarks, frame)
         gaze_left_eye_side_ratio, gaze_left_eye_topDown_ratio = g.get_gaze_ration([36, 37, 38, 39, 40, 41], landmarks,
                                                                                   frame, gray)
         gaze_right_eye_side_ratio, gaze_right_eye_topDown_ratio = g.get_gaze_ration([42, 43, 44, 45, 46, 47], landmarks,
