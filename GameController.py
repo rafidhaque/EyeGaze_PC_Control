@@ -69,7 +69,7 @@ while True:
         side_gaze_ratio = (gaze_left_eye_side_ratio + gaze_right_eye_side_ratio) / 2
         upDOwn_gaze_ratio = (gaze_left_eye_topDown_ratio + gaze_right_eye_topDown_ratio) / 2
         print("Face")
-        if upDOwn_gaze_ratio <= 42:
+        if upDOwn_gaze_ratio <= 99.5:
             if state != "DOWN":
                 ball.dy = 0
                 gravity = -.3
@@ -80,16 +80,16 @@ while True:
             cv2.putText(frame, "down", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), 6)
             right_side_upperBound = 3.1
             center_upperBound = 5
-        elif 42 < upDOwn_gaze_ratio < 99.5:
-
-            cv2.putText(frame, "center", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), 6)
+        # elif 42 < upDOwn_gaze_ratio < 99.5:
+        #
+        #     cv2.putText(frame, "center", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), 6)
         else:
             if state != "UP":
                 ball.dy = 0
                 gravity = .3
                 state = "UP"
             print(ball.dy)
-            print("DOwn")
+            print("UP")
             wn.bgcolor("black")
             ball.color("white")
             cv2.putText(frame, "up", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), 6)
